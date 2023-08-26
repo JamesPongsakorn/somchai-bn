@@ -362,11 +362,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pongsakorn.amo\\Source\\Repos\\somchai-bn\\somchai-bn\\somchai-bn.csproj",
+      "projectUniqueName": "C:\\Users\\pongsakorn.amo\\source\\repos\\somchai-bn\\somchai-bn\\somchai-bn.csproj",
       "projectName": "somchai-bn",
-      "projectPath": "C:\\Users\\pongsakorn.amo\\Source\\Repos\\somchai-bn\\somchai-bn\\somchai-bn.csproj",
+      "projectPath": "C:\\Users\\pongsakorn.amo\\source\\repos\\somchai-bn\\somchai-bn\\somchai-bn.csproj",
       "packagesPath": "C:\\Users\\pongsakorn.amo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pongsakorn.amo\\Source\\Repos\\somchai-bn\\somchai-bn\\obj\\",
+      "outputPath": "C:\\Users\\pongsakorn.amo\\source\\repos\\somchai-bn\\somchai-bn\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pongsakorn.amo\\AppData\\Roaming\\NuGet\\NuGet.Config",
