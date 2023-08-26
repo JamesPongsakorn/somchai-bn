@@ -1,12 +1,14 @@
+using Amazon.DynamoDBv2.DataModel;
 using Newtonsoft.Json;
 
 namespace somchai_bn.Model;
 
-public class CountryByAirportEntity : BaseEntity
+[DynamoDBTable("http-crud-tutorial-items2")]
+public class CountryByAirportEntity : EntityInterface
 {
-    public long Id { get; set; }
-    public string From { get; set; } = string.Empty;
-    public string Airport { get; set; } = string.Empty;
-    public string Country { get; set; } = string.Empty;
-    public string KeyId { get; set; } = string.Empty;
+    [DynamoDBHashKey]
+    public string id { get; set; } = string.Empty;
+    public string airport { get; set; } = string.Empty;
+    public string country { get; set; } = string.Empty;
+    public string keyid { get; set; } = string.Empty;
 }

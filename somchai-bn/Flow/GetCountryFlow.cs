@@ -5,22 +5,22 @@ namespace somchai_bn.Flow
 {
     public class GetCountryFlow
     {
-        private CountryKeyRepository hackathonRepository;
+        private BaseRepository repository;
         public GetCountryFlow()
         {
-            hackathonRepository = new CountryKeyRepository();
+            repository = new BaseRepository();
         }
         public GetCountryResponse GetCountryByAirport(GetCountryRequest request)
         {
-            List<CountryByAirportEntity> getCountryByAirport = hackathonRepository.GetEntity<CountryByAirportEntity>();
-            CountryByAirportEntity originalCountry = getCountryByAirport.First(x => x.From == request.originalAirport);
-            CountryByAirportEntity destinationCountry = getCountryByAirport.First(x => x.From == request.destinationAirport);
+            List<CountryByAirportEntity> getCountryByAirport = repository.GetEntity<CountryByAirportEntity>();
+            CountryByAirportEntity originalCountry = getCountryByAirport.First(x => x.id == request.originalAirport);
+            CountryByAirportEntity destinationCountry = getCountryByAirport.First(x => x.id == request.destinationAirport);
             GetCountryResponse response = new()
             {
-                originalCountry = originalCountry.Country,
-                originalKey = originalCountry.KeyId,
-                destinationCountry = destinationCountry.Country,
-                destinationKey = destinationCountry.KeyId
+                originalCountry = originalCountry.country,
+                originalKey = originalCountry.keyid,
+                destinationCountry = destinationCountry.country,
+                destinationKey = destinationCountry.keyid
             };
             return response;
         }

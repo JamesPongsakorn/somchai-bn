@@ -1,6 +1,12 @@
+using Amazon.DynamoDBv2;
+using Amazon.DynamoDBv2.DocumentModel;
+using Amazon;
 using Microsoft.AspNetCore.Mvc;
 using somchai_bn.Flow;
 using somchai_bn.Model;
+using somchai_bn.Configuration;
+using Amazon.DynamoDBv2.Model;
+using Amazon.DynamoDBv2.DataModel;
 
 namespace somchai_bn.Controllers;
 

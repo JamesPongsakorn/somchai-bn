@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "KqxKb6LfuMXeITtRW5r/tR6wDvUBUgRVLF/5WF5TC7ZJnxaFUabhdUywW7zugIUCfGpaUtpfobZCeniu4fIiXw==",
+  "dgSpecHash": "w/IjDKUs4dCBoesgs9mUtttxUHmfIgwQ0JaCm0hZ9i2Z3pLlUeQ8S3AJe+StsTP3Y4OXPvIszY7wqBXwDDyRTw==",
   "success": true,
   "projectFilePath": "C:\\Users\\pongsakorn.amo\\source\\repos\\somchai-bn\\somchai-bn\\somchai-bn.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\pongsakorn.amo\\.nuget\\packages\\awssdk.core\\3.7.201.6\\awssdk.core.3.7.201.6.nupkg.sha512",
+    "C:\\Users\\pongsakorn.amo\\.nuget\\packages\\awssdk.dynamodbv2\\3.7.200.27\\awssdk.dynamodbv2.3.7.200.27.nupkg.sha512",
     "C:\\Users\\pongsakorn.amo\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\pongsakorn.amo\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\pongsakorn.amo\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.18.1\\microsoft.visualstudio.azure.containers.tools.targets.1.18.1.nupkg.sha512",

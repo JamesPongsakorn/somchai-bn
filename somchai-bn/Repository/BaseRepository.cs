@@ -1,29 +1,29 @@
-﻿using Newtonsoft.Json;
+﻿using Amazon.DynamoDBv2.DataModel;
+using Amazon.DynamoDBv2;
+using Amazon;
+using somchai_bn.Configuration;
 using somchai_bn.Model;
 
 namespace somchai_bn.BusinessFlow
 {
-    public abstract class BaseRepository
+    public class BaseRepository
     {
-        private readonly string filePath = string.Empty;
-        public BaseRepository(string filePath)
+        private readonly DynamoDBContext context;
+        public BaseRepository()
         {
-            this.filePath = filePath;
+            AmazonDynamoDBClient dynamoClient = new(
+                AwsConfiguration.accessKey, AwsConfiguration.secretKey, AwsConfiguration.token, RegionEndpoint.USEast1);
+            context = new(dynamoClient);
         }
-        public List<T> GetEntity<T>() where T : BaseEntity
+        public List<T> GetEntity<T>() where T : EntityInterface
         {
-            string dataString = File.ReadAllText($"{Environment.CurrentDirectory}/{filePath}");
-            List<T> dataModel = JsonConvert.DeserializeObject<List<T>>(dataString)!;
-            return dataModel;
+            List<T> result = context.ScanAsync<T>(new List<ScanCondition>()).GetRemainingAsync()
+                .GetAwaiter().GetResult();
+            return result;
         }
-        public T CreateEntity<T>(T dataModel) where T : BaseEntity
+        public void CreateEntity<T>(T dataModel) where T : EntityInterface
         {
-            List<T> originalData = GetEntity<T>();
-            dataModel.Id = originalData.Count + 1;
-            originalData.Add(dataModel);
-            string dataString = JsonConvert.SerializeObject(originalData, Formatting.Indented)!;
-            File.WriteAllText($"{Environment.CurrentDirectory}/{filePath}", dataString);
-            return dataModel;
+            context.SaveAsync(dataModel).Wait();
         }
 
     }

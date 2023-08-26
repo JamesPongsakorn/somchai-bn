@@ -31,4 +31,5 @@ C:\Users\pongsakorn.amo\source\repos\somchai-bn\somchai-bn\obj\Debug\net6.0\refi
 C:\Users\pongsakorn.amo\source\repos\somchai-bn\somchai-bn\obj\Debug\net6.0\somchai-bn.pdb
 C:\Users\pongsakorn.amo\source\repos\somchai-bn\somchai-bn\obj\Debug\net6.0\somchai-bn.genruntimeconfig.cache
 C:\Users\pongsakorn.amo\source\repos\somchai-bn\somchai-bn\obj\Debug\net6.0\ref\somchai-bn.dll
-C:\Users\pongsakorn.amo\source\repos\somchai-bn\somchai-bn\bin\Debug\net6.0\Database\CountryKey.json
+C:\Users\pongsakorn.amo\source\repos\somchai-bn\somchai-bn\bin\Debug\net6.0\AWSSDK.Core.dll
+C:\Users\pongsakorn.amo\source\repos\somchai-bn\somchai-bn\bin\Debug\net6.0\AWSSDK.DynamoDBv2.dll

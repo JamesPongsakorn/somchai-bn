@@ -8,12 +8,32 @@
     ".NETCoreApp,Version=v6.0": {
       "somchai-bn/1.0.0": {
         "dependencies": {
+          "AWSSDK.DynamoDBv2": "3.7.200.27",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.18.1",
           "Newtonsoft.Json": "13.0.3",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
           "somchai-bn.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.7.201.6": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.201.6"
+          }
+        }
+      },
+      "AWSSDK.DynamoDBv2/3.7.200.27": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.201.6"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.200.27"
+          }
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
@@ -79,6 +99,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AWSSDK.Core/3.7.201.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z3+Q91ZQsTtB1mHY0Ttkqv5LEH4bfY1GW6SuOAsNErXfZuby6XxJn4o+0HGnZGFf8amx9MCWhVyfmcEPeoy1Uw==",
+      "path": "awssdk.core/3.7.201.6",
+      "hashPath": "awssdk.core.3.7.201.6.nupkg.sha512"
+    },
+    "AWSSDK.DynamoDBv2/3.7.200.27": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-m6x3oli2r1GAOoVb2sJ6NyGqAj7TAw1GZ90cpwiizSgqGkcQWE3L4/YzDhlHokArs8m17M1TV8CyRPKmvKOJRw==",
+      "path": "awssdk.dynamodbv2/3.7.200.27",
+      "hashPath": "awssdk.dynamodbv2.3.7.200.27.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
       "type": "package",
