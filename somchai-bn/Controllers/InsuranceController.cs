@@ -15,7 +15,7 @@ public class InsuranceController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet("getCountry")]
+    [HttpPut("CountryByAirport")]
     public GetCountryResponse HealthCheck(GetCountryRequest request)
     {
         return new GetCountryFlow().GetCountryByAirport(request);
