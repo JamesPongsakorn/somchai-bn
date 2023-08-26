@@ -15,13 +15,18 @@ namespace somchai_bn.BusinessFlow
                 AwsConfiguration.accessKey, AwsConfiguration.secretKey, AwsConfiguration.token, RegionEndpoint.USEast1);
             context = new(dynamoClient);
         }
-        public List<T> GetEntity<T>() where T : EntityInterface
+        public List<T> GetAllEntity<T>() where T : EntityInterface
         {
             List<T> result = context.ScanAsync<T>(new List<ScanCondition>()).GetRemainingAsync()
                 .GetAwaiter().GetResult();
             return result;
         }
-        public void CreateEntity<T>(T dataModel) where T : EntityInterface
+        public T GetEntity<T>(object hashKey) where T : EntityInterface
+        {
+            T result = context.LoadAsync<T>(hashKey).GetAwaiter().GetResult();
+            return result;
+        }
+        public void SaveEntity<T>(T dataModel) where T : EntityInterface
         {
             context.SaveAsync(dataModel).Wait();
         }

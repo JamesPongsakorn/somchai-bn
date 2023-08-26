@@ -15,15 +15,39 @@ namespace somchai_bn.Controllers;
 public class InsuranceController : ControllerBase
 {
     private readonly ILogger<InsuranceController> _logger;
+    private readonly InsuranceFlow insuranceFlow;
 
     public InsuranceController(ILogger<InsuranceController> logger)
     {
         _logger = logger;
+        insuranceFlow = new();
     }
 
-    [HttpPut("CountryByAirport")]
-    public GetCountryResponse HealthCheck(GetCountryRequest request)
+    [HttpPut("countryByAirport")]
+    public GetCountryResponse GetCountry([FromBody] GetCountryRequest request)
     {
-        return new GetCountryFlow().GetCountryByAirport(request);
+        return insuranceFlow.GetCountryByAirport(request);
+    }
+
+    [HttpGet("transaction")]
+    public GetTransactionResponse GetTransaction([FromQuery] string id)
+    {
+        return insuranceFlow.GetTransaction(id);
+    }
+
+    [HttpPost("transaction")]
+    public PostTransactionResponse PostTransaction([FromBody] PostTransactionRequest request)
+    {
+        return insuranceFlow.PostTransaction(request);
+    }
+    [HttpGet("person")]
+    public PersonEntity GetPerson([FromQuery] long id)
+    {
+        return insuranceFlow.GetPerson(id);
+    }
+    [HttpPost("person")]
+    public PersonEntity PostPerson([FromBody] PersonEntity request)
+    {
+        return insuranceFlow.PostPerson(request);
     }
 }
